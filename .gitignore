@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Downloaded files
+downloads/
+
+# Generated vector database
+vector_db/
+
+# YouTube cookies
+cookies.txt
+
+# VS Code settings (optional)
+.vscode/
+
+# macOS
+.DS_Store

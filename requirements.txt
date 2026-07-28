@@ -1,0 +1,56 @@
+# ============================
+# AI Meeting Assistant
+# ============================
+
+# Web UI
+streamlit>=1.37.0
+
+# LangChain
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-huggingface>=0.1.0
+langchain-mistralai>=0.2.0
+
+# Mistral API
+mistralai>=1.0.0
+
+# Embeddings
+sentence-transformers>=3.0.0
+huggingface-hub>=0.24.0
+
+# Vector Database
+chromadb>=0.5.5
+
+# Whisper (Local)
+openai-whisper
+torch
+torchaudio
+torchvision
+
+# Audio Processing
+ffmpeg-python
+pydub
+yt-dlp
+
+# Translation
+deep-translator
+
+# Data Handling
+numpy
+pandas
+
+# Tokenization
+tiktoken
+
+# Environment Variables
+python-dotenv
+
+# Export
+fpdf2
+
+# Utilities
+requests
+tqdm
+typing-extensions
