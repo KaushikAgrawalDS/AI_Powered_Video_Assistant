@@ -1,6 +1,7 @@
 import yt_dlp
 import os
 from pydub import AudioSegment
+import traceback
 
 DOWNLOAD_DIR = 'downloades'
 os.makedirs(DOWNLOAD_DIR,exist_ok=True)
@@ -13,6 +14,7 @@ def download_youtube_audio(url:str) -> str:
         'outtmpl':output_path,
         'quiet':False,
         'noplaylist':True,
+        'verbose':True,
         'http_headers': {
         'User-Agent': (
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -29,11 +31,18 @@ def download_youtube_audio(url:str) -> str:
         ],
         'quiet':True,
         }   
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(url,download=True)
-        filename = ydl.prepare_filename(info).replace(".webm",".wav").replace(".mp4a",".wav")
-    return filename
-
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=True)
+            filename = (
+                ydl.prepare_filename(info)
+                .replace(".webm", ".wav")
+                .replace(".m4a", ".wav")
+                .replace(".mp4a", ".wav")
+            )
+    except Exception as e:
+        print(traceback.format_exc())
+        raise e
 def convert_to_wav(input_path: str) -> str:
     
     """Convert any audio/video file to WAV format using pydub."""
