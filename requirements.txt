@@ -32,7 +32,7 @@ torchvision
 # Audio Processing
 ffmpeg-python
 pydub
-yt-dlp
+yt-dlp ==2026.07.04
 
 # Translation
 deep-translator

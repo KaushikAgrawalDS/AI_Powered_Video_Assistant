@@ -28,8 +28,12 @@ def download_youtube_audio(url:str) -> str:
                 'preferredcodec':'wav',
                 'preferredquality':'192'
             }
-        ],
-        'quiet':True,
+        ],"extractor_args": {
+        "youtube": {
+            "player_client": ["android", "web"]
+                        }
+                            }
+        ,
         }   
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
