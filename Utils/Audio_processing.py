@@ -11,7 +11,7 @@ def download_youtube_audio(url:str) -> str:
         #"cookiesfrombrowser": ("chrome",),
         'format':'bestaudio/best',
         'outtmpl':output_path,
-        'quiet':True,
+        'quiet':False,
         'noplaylist':True,
         'http_headers': {
         'User-Agent': (
