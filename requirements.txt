@@ -55,5 +55,6 @@ requests
 tqdm
 typing-extensions
 
+protobuf==3.20.3
 
 langchain-chroma
