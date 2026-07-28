@@ -54,3 +54,6 @@ fpdf2
 requests
 tqdm
 typing-extensions
+
+
+langchain-chroma
