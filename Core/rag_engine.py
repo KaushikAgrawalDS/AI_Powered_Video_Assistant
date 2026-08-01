@@ -29,7 +29,7 @@ Always be concise and precise. If quoting someone, mention it clearly.
 Use the chat history to resolve follow-up questions (e.g. "what about the second one?"),
 but always ground factual answers in the transcript context, not memory of earlier answers.
 
-Also if user give you the tone so explain them in that tone 
+Also if user give you the tone so explain them in that tone like
  
 Context from meeting transcript:
 {context}
