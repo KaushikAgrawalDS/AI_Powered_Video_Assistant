@@ -148,18 +148,7 @@ The application will start locally.
 
 ---
 
-## 📸 Screenshots
 
-Add screenshots of the application here.
-
-Example:
-
-```
-screenshots/home.png
-screenshots/chat.png
-```
-
----
 
 ## 📌 Future Improvements
 
@@ -173,31 +162,3 @@ screenshots/chat.png
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository.
-2. Create a new branch.
-3. Commit your changes.
-4. Open a Pull Request.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-**Kaushik Agrawal**
-
-GitHub: https://github.com/KaushikAgrawalDS
-
-LinkedIn: *(Add your LinkedIn profile URL here.)*
-
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub.
