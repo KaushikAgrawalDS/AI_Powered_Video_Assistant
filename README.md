@@ -1,6 +1,6 @@
 # 🎥 AI Powered Video Assistant
 
-An AI-powered application that transforms YouTube videos or local audio/video files into intelligent, searchable knowledge. The assistant transcribes audio, generates summaries, extracts action items, and answers user questions using Retrieval-Augmented Generation (RAG).
+An AI-powered assistant that transforms YouTube videos or local audio/video files into an intelligent, searchable knowledge base. The application transcribes audio, translates Hinglish conversations into English, generates summaries, extracts action items, and enables context-aware question answering using Retrieval-Augmented Generation (RAG).
 
 ---
 
@@ -8,17 +8,57 @@ An AI-powered application that transforms YouTube videos or local audio/video fi
 
 - 📺 Process YouTube videos
 - 📁 Upload local audio/video files
-- 🎙️ Automatic speech-to-text transcription using Whisper
-- 📝 AI-generated meeting or video summaries
+- 🎙️ Speech-to-Text transcription using OpenAI Whisper(English)/Sarvam AI(Hinglish)
+- 📝 AI-generated summaries
 - ✅ Automatic extraction of action items
-- 💬 Ask questions about the video using RAG
-- 🔎 Semantic search using ChromaDB
-- 🤖 Powered by Mistral AI and LangChain
-- 🌐 Simple Streamlit web interface
+- 💬 Q&A using RAG
+- 🧠 Chat history (conversation memory) for follow-up questions
+- 🔍 Semantic search using ChromaDB
+- 🤖 Powered by Mistral AI
+- 🌐 Interactive Streamlit web interface
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ Architecture
+
+```
+User Input
+      │
+      ▼
+YouTube URL / Local File
+      │
+      ▼
+Audio Extraction (yt-dlp / pydub)
+      │
+      ▼
+Speech-to-Text (OpenAI Whisper/Sarvam AI)
+      │
+      ▼
+Transcript
+      │
+      ├───────────────┐
+      ▼               ▼
+ Summary        Action Items
+      │
+      ▼
+Chunking + Embeddings
+      │
+      ▼
+ChromaDB Vector Store
+      │
+      ▼
+Retriever (LangChain)
+      │
+      ▼
+Mistral AI + Conversation Memory
+      │
+      ▼
+Context-Aware Answers
+```
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 - Streamlit
@@ -26,21 +66,29 @@ An AI-powered application that transforms YouTube videos or local audio/video fi
 ### Backend
 - Python
 
-### AI & NLP
-- OpenAI Whisper
+### AI Models
 - Mistral AI
+- OpenAI Whisper
+- Sarvam AI
+
+### Frameworks
 - LangChain
 
 ### Vector Database
 - ChromaDB
 
 ### Embeddings
-- HuggingFace Sentence Transformers
+- Hugging Face Sentence Transformers
 
 ### Audio Processing
 - yt-dlp
 - FFmpeg
 - pydub
+
+### Other Libraries
+- NumPy
+- Pandas
+- Python-dotenv
 
 ---
 
@@ -50,9 +98,9 @@ An AI-powered application that transforms YouTube videos or local audio/video fi
 AI_POWERED_VIDEO_ASSISTANT/
 │
 ├── Core/
-│   ├── rag_engine.py
-│   ├── summarizer.py
 │   ├── transcriber.py
+│   ├── summarizer.py
+│   ├── rag_engine.py
 │   ├── vectorestore.py
 │   └── Actionables.py
 │
@@ -71,94 +119,82 @@ AI_POWERED_VIDEO_ASSISTANT/
 
 ## ⚙️ Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
 ```
 
-Move into the project directory
+### Navigate to the project
 
 ```bash
 cd AI_Powered_Video_Assistant
 ```
 
-Create a virtual environment
+### Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the environment
+### Activate the environment
 
-### Windows
+Windows
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Linux / macOS
+## 💡 How It Works
 
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file in the project root.
-
-Example:
-
-```env
-MISTRAL_API_KEY=your_api_key_here
-```
-
----
-
-## ▶️ Run the Application
-
-```bash
-streamlit run app.py
-```
-
-The application will start locally.
-
----
-
-## 📖 How It Works
-
-1. Enter a YouTube URL or provide a local media file.
-2. Audio is extracted and converted into WAV format.
-3. Whisper transcribes the audio into text.
-4. The transcript is chunked and embedded.
-5. ChromaDB stores the embeddings.
-6. LangChain retrieves relevant context.
-7. Mistral AI generates:
+1. User enters a YouTube URL or uploads a local audio/video file.
+2. Audio is extracted using **yt-dlp** or **pydub**.
+3. OpenAI(English)/Sarvam AI(Hinglish) Whisper converts speech into text.
+4. The transcript is chunked into smaller sections.
+5. Sentence Transformers generate embeddings.
+6. ChromaDB stores the embeddings.
+7. LangChain retrieves the most relevant transcript chunks.
+8. Mistral AI generates:
    - Summary
    - Action Items
-   - Answers to user questions
+   - Context-aware answers
+9. Chat history is preserved, enabling natural follow-up questions while grounding responses in the transcript.
 
 ---
 
+## ✨ Key Capabilities
 
+- Speech-to-Text Transcription
+- Hinglish Translation
+- AI Summarization
+- Action Item Detection
+- Retrieval-Augmented Generation (RAG)
+- Conversational Memory
+- Semantic Search
+- Vector Database Integration
 
-## 📌 Future Improvements
+---
 
-- Support multiple LLM providers
-- Multi-language transcription
+## 🚀 Future Improvements
+
+- Multi-language support
 - Speaker diarization
-- PDF report generation
-- Conversation memory
+- PDF meeting reports
 - Cloud deployment
 - Meeting analytics dashboard
+- Support for multiple LLM providers
+- Authentication and user sessions
 
 ---
 
+## 👨‍💻 Author
+
+**Kaushik Agrawal**
+
+GitHub: https://github.com/KaushikAgrawalDS
+
+LinkedIn: *(www.linkedin.com/in/kaushik-agrawal-03b64624b)*
+
+---
+
+⭐ If you found this project useful, please consider giving it a star!
