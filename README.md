@@ -11,12 +11,13 @@ An AI-powered assistant that transforms YouTube videos or local audio/video file
 - 🎙️ Speech-to-Text transcription using OpenAI Whisper(English)/Sarvam AI(Hinglish)
 - 📝 AI-generated summaries
 - ✅ Automatic extraction of action items
-- 💬 Q&A using RAG
-- 🧠 Chat history (conversation memory) for follow-up questions
-- 🔍 Semantic search using ChromaDB
+- 🤖 Interactive AI Chatbot
+- 💬 Ask questions about the transcript in natural language
+- 🧠 Context-aware conversation memory for follow-up questions
+- 🔍 Retrieval-Augmented Generation (RAG) using LangChain + ChromaDB
+- ⚡ Semantic search over transcripts
 - 🤖 Powered by Mistral AI
-- 🌐 Interactive Streamlit web interface
-
+- 🌐 Interactive Streamlit Web Interface
 ---
 
 ## 🏗️ Architecture
@@ -50,10 +51,13 @@ ChromaDB Vector Store
 Retriever (LangChain)
       │
       ▼
-Mistral AI + Conversation Memory
+Mistral AI + LangChain
       │
       ▼
-Context-Aware Answers
+Context-Aware AI Chatbot
+      │
+      ▼
+Intelligent Responses
 ```
 
 ---
@@ -138,6 +142,7 @@ git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
    - Action Items
    - Key Decisions
    - Unresolved Questions
+   - Context-aware chatbot responses
 9. Chat history is preserved, enabling natural follow-up questions while grounding responses in the transcript.
 
 ---
@@ -149,6 +154,7 @@ git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
 - AI Summarization
 - Action Item, Key Decisions, Questions Detection
 - Retrieval-Augmented Generation (RAG)
+- AI Chatbot
 - Conversational Memory
 - Semantic Search
 - Vector Database Integration
