@@ -1,7 +1,6 @@
 import yt_dlp
 import os
 from pydub import AudioSegment
-import traceback
 import subprocess
 
 DOWNLOAD_DIR = 'downloades'
