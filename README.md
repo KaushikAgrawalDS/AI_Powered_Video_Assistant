@@ -194,7 +194,7 @@ Windows
 
 GitHub: https://github.com/KaushikAgrawalDS
 
-LinkedIn: *(www.linkedin.com/in/kaushik-agrawal-03b64624b)*
+LinkedIn: *www.linkedin.com/in/kaushik-agrawal-03b64624b*
 
 ---
 
