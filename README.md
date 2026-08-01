@@ -36,9 +36,9 @@ Speech-to-Text (OpenAI Whisper/Sarvam AI)
       ▼
 Transcript
       │
-      ├───────────────┐
-      ▼               ▼
- Summary        Action Items
+      ├───────────────┐───────────────┐────────────────────┐
+      ▼               ▼               ▼                    ▼
+ Summary        Action Items         Key Decisions     Unresolved Questions
       │
       ▼
 Chunking + Embeddings
@@ -149,7 +149,7 @@ Windows
 
 1. User enters a YouTube URL or uploads a local audio/video file.
 2. Audio is extracted using **yt-dlp** or **pydub**.
-3. OpenAI(English)/Sarvam AI(Hinglish) Whisper converts speech into text.
+3. OpenAI Whisper(English)/Sarvam AI(Hinglish)  converts speech into text.
 4. The transcript is chunked into smaller sections.
 5. Sentence Transformers generate embeddings.
 6. ChromaDB stores the embeddings.
@@ -157,7 +157,8 @@ Windows
 8. Mistral AI generates:
    - Summary
    - Action Items
-   - Context-aware answers
+   - Key Decisions
+   - Unresolved Questions
 9. Chat history is preserved, enabling natural follow-up questions while grounding responses in the transcript.
 
 ---
@@ -167,7 +168,7 @@ Windows
 - Speech-to-Text Transcription
 - Hinglish Translation
 - AI Summarization
-- Action Item Detection
+- Action Item, Key Decisions, Questions Detection
 - Retrieval-Augmented Generation (RAG)
 - Conversational Memory
 - Semantic Search
