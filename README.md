@@ -69,6 +69,69 @@ AI_POWERED_VIDEO_ASSISTANT/
 
 ---
 
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
+```
+
+Move into the project directory
+
+```bash
+cd AI_Powered_Video_Assistant
+```
+
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root.
+
+Example:
+
+```env
+MISTRAL_API_KEY=your_api_key_here
+```
+
+---
+
+## ▶️ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The application will start locally.
+
+---
 
 ## 📖 How It Works
 
@@ -85,3 +148,56 @@ AI_POWERED_VIDEO_ASSISTANT/
 
 ---
 
+## 📸 Screenshots
+
+Add screenshots of the application here.
+
+Example:
+
+```
+screenshots/home.png
+screenshots/chat.png
+```
+
+---
+
+## 📌 Future Improvements
+
+- Support multiple LLM providers
+- Multi-language transcription
+- Speaker diarization
+- PDF report generation
+- Conversation memory
+- Cloud deployment
+- Meeting analytics dashboard
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Kaushik Agrawal**
+
+GitHub: https://github.com/KaushikAgrawalDS
+
+LinkedIn: *(Add your LinkedIn profile URL here.)*
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
