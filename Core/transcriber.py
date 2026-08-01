@@ -3,6 +3,7 @@ import os
 import requests
 from pydub import AudioSegment
 from dotenv import load_dotenv
+import subprocess
 load_dotenv()
 
 # Sarvam's sync STT-translate API rejects audio longer than 30s.
@@ -10,7 +11,7 @@ load_dotenv()
 SARVAM_PIECE_SECONDS = 25
 
 
-WHISPER_MODEL = os.getenv("WHISPER_MODEL", "tiny")
+WHISPER_MODEL = os.getenv("WHISPER_MODEL", "base")
 
 
 SARVAM_API_KEY = os.getenv("SARVAM_API_KEY")
