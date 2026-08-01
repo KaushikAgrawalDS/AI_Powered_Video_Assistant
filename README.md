@@ -117,33 +117,12 @@ AI_POWERED_VIDEO_ASSISTANT/
 
 ---
 
-## ⚙️ Installation
-
-### Clone the repository
+##% Clone the repository
 
 ```bash
 git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
 ```
 
-### Navigate to the project
-
-```bash
-cd AI_Powered_Video_Assistant
-```
-
-### Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-### Activate the environment
-
-Windows
-
-```bash
-.venv\Scripts\activate
-```
 
 ## 💡 How It Works
 
