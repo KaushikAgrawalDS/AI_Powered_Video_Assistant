@@ -12,7 +12,7 @@ def download_youtube_audio(url:str) -> str:
         "format": "bestaudio/best",
         "outtmpl": output_path,
         'cookiefile':'cookies.txt',
-        "extractor_args": {"youtube": {"player_client": ["android"]}},
+        "extractor_args": {"youtube": {"player_client": ["ios","android", "web"]}},
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
