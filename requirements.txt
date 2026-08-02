@@ -30,7 +30,7 @@ torchaudio
 torchvision
 
 # Audio Processing
-ffmpeg-python
+ffmpeg
 pydub
 yt-dlp ==2026.07.04
 
