@@ -36,7 +36,8 @@ def transcribe_chunk_whisper(chunk_path: str) -> str:
 
     model = load_model()  
 
-    result = model.transcribe(chunk_path, task="transcribe")  
+    result = model.transcribe(chunk_path, task="transcribe",language='en',condition_on_previous_text=False,
+                              no_speech_threshold=0.6,compression_ratio_threshold=2.4,logprob_threshold=-1.0,)  
     return result["text"]  
 
 
