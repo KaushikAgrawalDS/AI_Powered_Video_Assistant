@@ -122,7 +122,7 @@ AI_POWERED_VIDEO_ASSISTANT/
 
 ---
 
-##% Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/KaushikAgrawalDS/AI_Powered_Video_Assistant.git
